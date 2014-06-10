@@ -1,3 +1,10 @@
-<%= @uid %>
-<%= @request_str %>
-<%= @response %>
+<%= render "search_form" %>
+
+<% if @film %>
+  <p>
+    <%= link_to @film.title, @film.link %>
+  </p>
+  <p>
+    <%= @film.description %>
+  </p>
+<% end %>

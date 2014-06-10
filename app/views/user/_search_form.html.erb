@@ -1,0 +1,10 @@
+<p>
+  Insert your IMDB Author ID below.<br/>
+  To find it, go to your watchlist on IMDB.<br/>
+  It should be of the form:<br/>
+  <pre>http://www.imdb.com/user/<b>your_author_id</b>/watchlist</pre>
+</p>
+
+<%= form_tag "/random" %>
+<%= text_field_tag :id, @uid %>
+<%= submit_tag "Randomize!" %>
