@@ -1,7 +1,8 @@
 What2watch::Application.routes.draw do
   
   # Grab a random film
-  post "random" => 'user#random'
+  get  "random/:id" => 'user#random', as: :random_result
+  post "random" => 'user#random_search'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
